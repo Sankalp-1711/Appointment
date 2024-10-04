@@ -1,0 +1,131 @@
+
+
+.appointment-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('../../assets/Hero.png') no-repeat center center/cover; /* Full cover for background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .appointment-content {
+      padding: 40px;
+      border-radius: 10px;
+      width: 600px;
+      max-width: 90%;
+      text-align: center;
+      color: #fff;
+      background-color: transparent; /* Keep the content background transparent */
+  
+      h2 {
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-family: "Urbanist";
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+  
+      h1 {
+        font-size: 40px;
+        font-weight: 400;
+        margin-bottom: 30px;
+      }
+  
+      form {
+        .form-row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 25px; /* Equal spacing between form rows */
+          gap: 20px;
+  
+          input,
+          select {
+            width: 48%;
+            padding: 12px;
+            background-color: transparent; /* Make the background completely transparent */
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+  
+            &::placeholder {
+              color: rgba(255, 255, 255, 0.7); /* Lighter placeholder color */
+            }
+  
+            &:focus {
+              border-color: rgba(255, 255, 255, 1); /* Bright border on focus */
+              outline: none;
+            }
+          }
+        }
+  
+        textarea {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 20px;
+          background-color: transparent; /* Make the background completely transparent */
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+  
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+          }
+  
+          &:focus {
+            border-color: rgba(255, 255, 255, 1);
+            outline: none;
+          }
+        }
+  
+        button {
+          width: 100%;
+          padding: 15px;
+          background-color: #000; /* Solid black background */
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+  
+          &:hover {
+            background-color: #333; /* Darker on hover */
+          }
+        }
+      }
+    }
+  }
+  
+  // Media Query for Mobile Responsiveness
+  @media (max-width: 768px) {
+    .appointment-container {
+      height: auto; /* Allow height to adjust for content */
+    }
+  
+    .appointment-content {
+      padding: 20px; /* Reduce padding for smaller screens */
+      width: 90%; /* Make the content take up more space */
+      
+      h1 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+        margin-bottom: 20px; /* Reduce margin */
+      }
+
+  
+      form {
+        .form-row {
+          flex-direction: column; /* Stack form fields vertically */
+          gap: 15px; /* Reduce gap between fields */
+          align-items: center; /* Center align items */
+        }
+  
+        input,
+        select {
+          width: 100%; /* Full width for inputs on mobile */
+        }
+      }
+    }
+  }
+  
+  
+
